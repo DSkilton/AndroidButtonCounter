@@ -28,9 +28,16 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener ourOnClickListener = new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                numTimesClicked++;
-                String result = "\nThe button has been clicked " + numTimesClicked + " time(s)";
-                textView.append(result);
+
+                if(numTimesClicked < 1){
+                    numTimesClicked++;
+                    String result = "\nThe button has been clicked " + numTimesClicked + " time";
+                    textView.append(result);
+                } else {
+                    numTimesClicked++;
+                    String result = "\nThe button has been clicked " + numTimesClicked + " times";
+                    textView.append(result);
+                }
             }
         };
 
