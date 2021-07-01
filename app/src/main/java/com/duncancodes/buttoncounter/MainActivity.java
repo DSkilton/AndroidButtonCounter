@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText userInput; //storing EditText widget data in variable userInput
     private TextView textView; //as above etc
     private static final String TAG = "MainActivity";
+    private final String TEXT_CONTENTS = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);  //R.id is a class which allows us to search and pass XML @+ID's
                                                             //Basically, it refers to the widget in the layout
 
-        userInput.setText("");//clears EditText
+        userInput.getText().clear();//clears EditText
         textView.setText("");//clears TextView
         textView.setMovementMethod((new ScrollingMovementMethod()));//makes the text view scroll
 
@@ -64,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         Log.d(TAG, "onRestoreInstanceState: in");
+//        String saveString = savedInstanceState.getString(TEXT_CONTENTS);//restores onSaveInstanceState
+//        textView.setText(saveString); //restores text to text view
+        textView.setText(savedInstanceState.getString(TEXT_CONTENTS)); //short hand of previous two lines
         super.onRestoreInstanceState(savedInstanceState);
         Log.d(TAG, "onRestoreInstanceState: out");
     }
@@ -85,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState){
         Log.d(TAG, "onSaveInstanceState: in");
-        super.onSaveInstanceState(outState);
+        outState.putString(TEXT_CONTENTS, textView.getText().toString()); //saves whatever is in the textView so if the app
+        super.onSaveInstanceState(outState);                              //change orientation, the data isn't lost
         Log.d(TAG, "onSaveInstanceState: out");
     }
 
