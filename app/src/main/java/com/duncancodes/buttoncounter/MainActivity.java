@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 textView.append(result);
             }
         };
-        button.setOnClickListener(ourOnClickListener);
+        if(button != null) { //checks for null value
+            button.setOnClickListener(ourOnClickListener);
+        }
     }
 }
