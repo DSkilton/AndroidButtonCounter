@@ -2,6 +2,7 @@ package com.duncancodes.buttoncounter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText userInput; //storing EditText widget data in variable userInput
     private Button button; //as above, button for button
     private TextView textView; //as above etc
-    private int numTimesClicked = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +25,20 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);  //R.id is a class which allows us to search and pass XML @+ID's
                                                             //Basically, it refers to the widget in the layout
 
+        textView.setText("");//clears text view
+        textView.setMovementMethod((new ScrollingMovementMethod()));//makes the text view scroll
+
         View.OnClickListener ourOnClickListener = new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
-                if(numTimesClicked < 1){
-                    numTimesClicked++;
-                    String result = "\nThe button has been clicked " + numTimesClicked + " time";
-                    textView.append(result);
-                } else {
-                    numTimesClicked++;
-                    String result = "\nThe button has been clicked " + numTimesClicked + " times";
-                    textView.append(result);
-                }
+                String result = userInput.getText().toString();
+//                another way would be to use:
+//                Editable e = userInput.getText();
+//                result = e.toString();
+                result = result + "\n";
+                textView.append(result);
             }
         };
-
         button.setOnClickListener(ourOnClickListener);
     }
-
-
 }
