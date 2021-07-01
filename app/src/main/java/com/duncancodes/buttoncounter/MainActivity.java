@@ -24,20 +24,21 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);  //R.id is a class which allows us to search and pass XML @+ID's
                                                             //Basically, it refers to the widget in the layout
 
-        userInput.getText().clear();//another way to clear text
-        textView.setText("");//clears text view
+        userInput.setText("");//clears EditText
+        textView.setText("");//clears TextView
         textView.setMovementMethod((new ScrollingMovementMethod()));//makes the text view scroll
 
         View.OnClickListener ourOnClickListener = new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                userInput.getText().clear();// clears text on button click
+
                 String result = userInput.getText().toString();
 //                another way would be to use:
 //                Editable e = userInput.getText();
 //                result = e.toString();
                 result = result + "\n";
                 textView.append(result);
+                userInput.setText("");// clears text on button click
             }
         };
         if(button != null) { //checks for null value
