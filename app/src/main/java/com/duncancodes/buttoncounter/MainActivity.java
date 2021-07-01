@@ -1,8 +1,12 @@
 package com.duncancodes.buttoncounter;
 
+import android.os.PersistableBundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,9 +15,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private EditText userInput; //storing EditText widget data in variable userInput
     private TextView textView; //as above etc
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: in");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        setContentView(R.layout.note_layout);
@@ -43,6 +50,63 @@ public class MainActivity extends AppCompatActivity {
         };
         if(button != null) { //checks for null value
             button.setOnClickListener(ourOnClickListener);
+            Log.d(TAG, "onCreate: out");
         }
+    }//end of create method
+
+    @Override
+    protected void onStart() {
+        Log.d(TAG, "onStart: in");
+        super.onStart();
+        Log.d(TAG, "onStart: out");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        Log.d(TAG, "onRestoreInstanceState: in");
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.d(TAG, "onRestoreInstanceState: out");
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy: in");
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: out");
+    }
+
+    @Override
+    protected void onRestart() {
+        Log.d(TAG, "onRestart: in");
+        super.onRestart();
+        Log.d(TAG, "onRestart: out");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        Log.d(TAG, "onSaveInstanceState: in");
+        super.onSaveInstanceState();
+        Log.d(TAG, "onSaveInstanceState: out");
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(TAG, "onPause: in");
+        super.onPause();
+        Log.d(TAG, "onPause: out");
+    }
+
+    @Override
+    protected void onResume() {
+        Log.d(TAG, "onResume: in");
+        super.onResume();
+        Log.d(TAG, "onResume: out");
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(TAG, "onStop: in");
+        super.onStop();
+        Log.d(TAG, "onStop: out");
     }
 }
