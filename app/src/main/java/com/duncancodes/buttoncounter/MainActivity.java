@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //(EditText) sets the data type
         userInput =(EditText) findViewById(R.id.editText);  //findViewById returns view object and appropriate
-        button = (Button) findViewById(R.id.button);        //type is assigned using casting
+        Button button = (Button) findViewById(R.id.button); //type is assigned using casting
         textView = (TextView) findViewById(R.id.textView);  //R.id is a class which allows us to search and pass XML @+ID's
                                                             //Basically, it refers to the widget in the layout
 
