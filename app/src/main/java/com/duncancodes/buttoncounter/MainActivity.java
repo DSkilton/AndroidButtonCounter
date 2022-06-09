@@ -20,9 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "onCreate: in");
-
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: in");
         setContentView(R.layout.activity_main);
 //        setContentView(R.layout.note_layout);
 
