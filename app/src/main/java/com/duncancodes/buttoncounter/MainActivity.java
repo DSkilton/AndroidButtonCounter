@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView ivNotepad = (ImageView)findViewById(R.id.imageViewNotepad);
-        ivNotepad.setOnClickListener(v ->{
+        ivNotepad.setOnClickListener(v -> {
             Log.d(TAG, "Image view clicked");
 
             Intent intent = new Intent(MainActivity.this, NotepadActivity.class);
