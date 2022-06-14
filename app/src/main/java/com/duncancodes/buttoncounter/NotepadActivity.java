@@ -12,7 +12,7 @@ public class NotepadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: " );
 
-        setContentView(R.layout.note_layout);
+        setContentView(R.layout.activity_notepad);
     }
 
 }

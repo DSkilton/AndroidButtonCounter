@@ -21,7 +21,7 @@ public class ButtonCounterActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: in");
         setContentView(R.layout.activity_button_counter);
 
-        setContentView(R.layout.note_layout);
+        setContentView(R.layout.activity_notepad);
 
         //(EditText) sets the data type
         userInput = (EditText) findViewById(R.id.editText); //findViewById returns view object and appropriate

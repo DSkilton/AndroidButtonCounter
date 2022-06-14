@@ -6,38 +6,83 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="149dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView Example Title"
+        android:id="@+id/txtViewBlurb3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Dashboard to tie together small projects"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtViewPortfolio2"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPortfolio2" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewPortfolio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="217dp"
-        android:layout_height="551dp"
+    <ImageView
+        android:id="@+id/imageViewHamburgerMenu2"
+        android:layout_width="103dp"
+        android:layout_height="102dp"
+        android:contentDescription="@string/none"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:srcCompat="@mipmap/hamburger_foreground" />
+
+    <TextView
+        android:id="@+id/txtViewPortfolio2"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Portfolio"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtViewBlurb3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="126dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:srcCompat="@drawable/robot" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="378dp"
+        android:layout_height="378dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
         android:text="This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button."
-        app:layout_constraintBottom_toTopOf="@+id/btnOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
-        android:autofillHints="" />
+        tools:layout_editor_absoluteY="254dp" />
 
     <Button
         android:id="@+id/btnCancel"
@@ -66,15 +111,4 @@
         app:layout_constraintEnd_toStartOf="@+id/btnCancel"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="149dp"
-        android:layout_height="174dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="fitStart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/robot" />
 </android.support.constraint.ConstraintLayout>
