@@ -65,7 +65,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtViewBlurb3"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
         app:srcCompat="@drawable/robot" />
 
@@ -73,16 +75,17 @@
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="378dp"
         android:layout_height="378dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="59dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         android:scrollbars="vertical"
         android:text="This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button. This ok button is now constrained vertically, to remain lined up with the baseline of the cancel button. A baseline constrating the top or bottom of a button."
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="254dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewBlurb3" />
 
     <Button
         android:id="@+id/btnCancel"
