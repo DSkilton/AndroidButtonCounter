@@ -41,7 +41,7 @@ class ButtonCounterActivity : AppCompatActivity() {
             textView!!.append(result)
             userInput!!.setText("") // clears text on button click
         }
-        if (button != null) { //checks for null value
+        if(button != null) { //checks for null value
             button.setOnClickListener(ourOnClickListener)
             Log.d(TAG, "onCreate: out")
         }
