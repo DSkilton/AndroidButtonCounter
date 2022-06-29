@@ -8,9 +8,13 @@
         <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/drawable/ic_computer_bug_virus1_background.xml" value="0.308" />
         <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/drawable/ic_computer_bug_virus_background.xml" value="0.308" />
         <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.308" />
-        <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/layout/activity_button_counter.xml" value="0.3046875" />
+        <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/layout/activity_main.xml" value="0.6666666666666666" />
+        <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/layout/activity_notepad.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/layout/dashboard.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/layout/note_layout.xml" value="0.146875" />
+        <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/mipmap-anydpi-v26/hamburger.xml" value="0.1" />
+        <entry key="..\:/Users/MC03353/AndroidStudioProjects/AndroidButtonCounter/app/src/main/res/mipmap-anydpi-v26/hamburger_round.xml" value="0.1" />
       </map>
     </option>
   </component>
