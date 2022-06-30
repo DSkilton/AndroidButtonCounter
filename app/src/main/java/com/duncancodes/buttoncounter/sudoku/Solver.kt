@@ -21,28 +21,42 @@ internal object Solver {
                         if(solve()){
                             return true
                         }
-
                         grid[i][j] = 0
-                    }
+                    }//end of for
                     return false
-
-                }
-            }
-        }
-
+                }//end of if
+            }//end of j for
+        }//end of i for
         return true
     }
 
-    private fun getAvaiableDigits(row: Int, column: Int) : Iterable {
+    private fun getAvaiableDigits(row: Int, column: Int) : Iterable<Int> {
         val digitsRange = MIN_DIGIT_VALE..MAX_DIGIT_VALUE
         val availableDigits = muteableSetOf()
         availableDigits.addAll(digitsRange)
 
         truncateByDigitsAlreadyUsedInRow(availableDigits, row)
+        if(availableDigits.size > 1){
+            truncateByDigitsAlreadyUsedInColumn(availableDigits, column)
+        }
+        if(availableDigits.size > 1){
+            truncateByDigitsAlreadyUsedInBox(availableDigits, row, column)
+        }
+
+        return availableDigits.asIterable()
+    }
+
+    private fun truncateByDigitsAlreadyUsedInRow(availableDigits: MutableSet<Int>, row: Int){
 
     }
 
-    private fun truncateByDigitsAlreadyUsedInRow(availableDigits: MutableSet, row: Int){
+    private fun truncateByDigitsAlreadyUsedInColumn(availableDigits: MutableSet<Int>, column: Int){
 
     }
+
+    private fun truncateByDigitsAlreadyUsedInBow(availableDigits: MutableSet<Int>, row: Int){
+
+    }
+
+
 }
