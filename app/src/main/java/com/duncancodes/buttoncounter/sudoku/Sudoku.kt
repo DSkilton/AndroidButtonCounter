@@ -4,6 +4,6 @@ import kotlin.random.Random
 
 class Sudoku private constructor(val level: Level){
 
-    val grid = Array(ConstantsGRID_SIZE){ intArray(GRID_SIZE) {0} }
+    val grid = Array(GRID_SIZE){ IntArray(GRID_SIZE) {0} }
 
 }

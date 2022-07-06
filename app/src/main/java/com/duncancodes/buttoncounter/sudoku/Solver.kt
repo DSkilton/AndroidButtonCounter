@@ -16,7 +16,7 @@ internal object Solver {
             for(j in 0 until GRID_SIZE){
                 if(grid[i][j] == 0){
                     val availableDigits = getAvailableDigits(i, j)
-                    for(K in availableDigits){
+                    for(k in availableDigits){
                         grid[i][j] = k
                         if(solve()){
                             return true
@@ -31,8 +31,8 @@ internal object Solver {
     }
 
     private fun getAvailableDigits(row: Int, column: Int) : Iterable<Int> {
-        val digitsRange = MIN_DIGIT_VALE..MAX_DIGIT_VALUE
-        val availableDigits = muteableSetOf()
+        val digitsRange = MIN_DIGIT_VALUE..MAX_DIGIT_VALUE
+        val availableDigits = mutableSetOf<Int>()
         availableDigits.addAll(digitsRange)
 
         truncateByDigitsAlreadyUsedInRow(availableDigits, row)
@@ -54,7 +54,7 @@ internal object Solver {
 
     }
 
-    private fun truncateByDigitsAlreadyUsedInBow(availableDigits: MutableSet<Int>, row: Int){
+    private fun truncateByDigitsAlreadyUsedInBox(availableDigits: MutableSet<Int>, row: Int, column: Int){
 
     }
 
