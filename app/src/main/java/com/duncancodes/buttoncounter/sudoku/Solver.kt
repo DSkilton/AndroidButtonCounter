@@ -48,18 +48,22 @@ internal object Solver {
 
     private fun truncateByDigitsAlreadyUsedInRow(availableDigits: MutableSet<Int>, row: Int){
         for(i in MIN_DIGIT_VALUE..MAX_DIGIT_VALUE){
-            if(grid[i][row] != 0){
+            if(grid[row][i] != 0){
                 availableDigits.remove(grid[row][i])
             }
         }
     }
 
     private fun truncateByDigitsAlreadyUsedInColumn(availableDigits: MutableSet<Int>, column: Int){
-
+        for(i in MIN_DIGIT_VALUE..MAX_DIGIT_VALUE){
+            if(grid[i][column] != 0){
+                availableDigits.remove(grid[i][column])
+            }
+        }
     }
 
     private fun truncateByDigitsAlreadyUsedInBox(availableDigits: MutableSet<Int>, row: Int, column: Int){
-
+        
     }
 
 
