@@ -47,7 +47,11 @@ internal object Solver {
     }
 
     private fun truncateByDigitsAlreadyUsedInRow(availableDigits: MutableSet<Int>, row: Int){
-
+        for(i in MIN_DIGIT_VALUE..MAX_DIGIT_VALUE){
+            if(grid[i][row] != 0){
+                availableDigits.remove(grid[row][i])
+            }
+        }
     }
 
     private fun truncateByDigitsAlreadyUsedInColumn(availableDigits: MutableSet<Int>, column: Int){
