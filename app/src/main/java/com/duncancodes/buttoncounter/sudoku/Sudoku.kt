@@ -17,7 +17,30 @@ class Sudoku private constructor(val level: Level?){
     }
 
     private fun fillDiagonalBoxes(){
+        for(i in 0 until GRID_SIZE step GRID_SIZE_SQUARE_ROOT){
+            fillBox(i, i)
+        }
+    }
 
+    private fun fillBox(row: Int, column: Int){
+        var generatedDigit: Int
+
+        for(i in 0 until GRID_SIZE_SQUARE_ROOT){
+            for(j in 0 until GRID_SIZE_SQUARE_ROOT){
+                do {
+                    generatedDigit = generateRandomInt(MIN_DIGIT_VALUE, MAX_DIGIT_VALUE)
+                } while(!isUnusedInBox(row, column, generatedDigit))
+
+                grid[row + i][column + j] = generatedDigit
+                }
+            }
+        }
+    }
+
+    private fun generateRandomInt(min: Int, max: Int) = Random.nextInt(min, max + 1)
+
+    private fun isUnusedInBox() {
+        
     }
 
     private fun fillRemaining(){
@@ -25,7 +48,7 @@ class Sudoku private constructor(val level: Level?){
     }
 
     private fun removeDigits(){
-        
+
     }
 
 }
