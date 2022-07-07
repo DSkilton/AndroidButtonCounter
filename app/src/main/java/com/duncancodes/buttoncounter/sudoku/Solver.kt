@@ -64,9 +64,12 @@ internal object Solver {
 
     private fun truncateByDigitsAlreadyUsedInBox(availableDigits: MutableSet<Int>, row: Int, column: Int){
         val rowStart = findBoxStart(row)
+        val rowEnd = findBoxEnd(rowStart)
     }
 
     private fun findBoxStart(index: Int) = index - index % GRID_SIZE_SQUARE_ROOT
+
+    private fun findBoxEnd(index: Int) = index + BOX_SIZE - 1
 
 
 }
